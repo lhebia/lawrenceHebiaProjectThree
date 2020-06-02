@@ -1,0 +1,13 @@
+//On document ready, load a randomly generated 4 * 4 grid of card tiles
+
+// When the user clicks a card, the card changes appearance to show an element to match - store this user selection in a variable
+
+// When the user clicks on a second card, a function runs to check for a match between the current selection and the previously selected card
+
+    // If this card matches the initial stored card
+        // Hide both cards and add 1 to the card pair counter variable
+    // If the cards do not match, flip them both to hide the “front” of each one
+
+// After each try, a check for winner function will run to see if the pair counters have reached the total pairs on the deck
+
+// If there is a winner, a message will dynamically be added to the page
