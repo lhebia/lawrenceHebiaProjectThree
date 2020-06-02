@@ -27,6 +27,9 @@ section {
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
+    -webkit-box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
+    -moz-box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
+    box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
 }
 
 article {
@@ -39,41 +42,40 @@ article {
 
 article button {
     padding: 1.5rem;
-    border: 1px solid black;
-    font-size: 3rem;
+    border: 1px solid rgb(125, 125, 125);
+    font-size: 4rem;
     border-radius: 4px;
     cursor: pointer;
     background-color: #f2f2f2;
-    background-image: url('https://images.unsplash.com/photo-1567044686506-1e63faa85866?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80');
+    background-image: url('./../../assets/woodPanel.jpg');
     background-size: cover;
 }
 
 article button:hover,
 article button:focus {
     /* background-color: #fcdf00; */
-    /* transform: scale(1.06); */
-    border: 1px solid red;
+    transform: scale(1.06);
+    border: 1px solid rgb(125, 125, 125);
+    -webkit-box-shadow: 0px 10px 47px -2px rgba(0,0,0,0.68);
+    -moz-box-shadow: 0px 10px 47px -2px rgba(0,0,0,0.68);
+    box-shadow: 0px 10px 47px -2px rgba(0,0,0,0.68);
 }
 
 article button:active {
-    background-color: #cbb300;
+    // background-color: #cbb300;
     transform: scale(0.96);
-}
-
-.showOpen {
-    background-color: #fcdf00;
 }
 
 span.hide { 
     opacity: 0;
 }
 
-.stuck {
-    pointer-events: none;
+.open {
+    background-image: none;
 }
 
-.hideBackground {
-    background-image: none;
+.hidden {
+    visibility: hidden;
 }
 
 
