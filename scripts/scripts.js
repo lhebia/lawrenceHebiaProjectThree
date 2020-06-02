@@ -39,6 +39,7 @@ noahsApp.addCardListeners = function() {
         setTimeout(function () {
             noahsApp.checkForWinner();
         }, 500)
+        console.log(noahsApp.matchCounter);
     })
 }
 
@@ -54,6 +55,8 @@ noahsApp.checkForMatch = function(clickedButton) {
             setTimeout(function () {
                 $('.open').addClass('hidden');
                 noahsApp.matchCounter++;
+                // TROUBLESHOOTING SOMETHING THAT IS INCREASING THIS
+                console.log(noahsApp.matchCounter);
             }, 500)
             noahsApp.clickedCard = null;
         } else {
