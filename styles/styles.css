@@ -227,4 +227,86 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: 100vh;
   width: 100vw;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: calc(100vh - 20px);
+}
+
+section {
+  background-color: lightgray;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+article {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+article button {
+  padding: 1.5rem;
+  border: 1px solid black;
+  font-size: 3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  background-image: url("https://images.unsplash.com/photo-1567044686506-1e63faa85866?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80");
+  background-size: cover;
+}
+
+article button:hover,
+article button:focus {
+  /* background-color: #fcdf00; */
+  /* transform: scale(1.06); */
+  border: 1px solid red;
+}
+
+article button:active {
+  background-color: #cbb300;
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.showOpen {
+  background-color: #fcdf00;
+}
+
+span.hide {
+  opacity: 0;
+}
+
+.stuck {
+  pointer-events: none;
+}
+
+.hideBackground {
+  background-image: none;
+}
+
+footer {
+  text-align: center;
+  height: 20px;
 }
