@@ -315,6 +315,11 @@ h1, h2, h3 {
   box-shadow: none;
 }
 
+.startButton,
+.startHardButton {
+  text-transform: uppercase;
+}
+
 .resetButton {
   font-size: 1rem;
   padding: 0 0.5rem;
