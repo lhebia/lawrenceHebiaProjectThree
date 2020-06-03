@@ -41,6 +41,7 @@ h3 {
     border: 4px solid white;
     padding: 2rem;
     width: 60%;
+    max-width: 700px;
     text-align: center;
     p {
         color: white;
@@ -75,8 +76,10 @@ h3 {
     align-items: center;
     width: 100vw;
     height: calc(100vh - 2rem);
-    background: rgb(0,38,128);
-    background: linear-gradient(142deg, rgba(0,38,128,1) 26%, rgba(31,96,255,1) 66%, rgba(185,213,255,1) 95%); 
+    // background: rgb(0,38,128);
+    // background: linear-gradient(142deg, rgba(0,38,128,1) 26%, rgba(31,96,255,1) 66%, rgba(185,213,255,1) 95%); 
+    background: rgb(90,139,255);
+    background: linear-gradient(180deg, rgba(90,139,255,1) 0%, rgba(103,135,213,1) 21%, rgba(185,213,255,1) 69%); 
 }
 
 .mainBoard {
@@ -92,7 +95,7 @@ h3 {
 article.gameBoard {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 1rem;
 }
@@ -104,8 +107,10 @@ article button {
     border-radius: 4px;
     cursor: pointer;
     background-color: #f2f2f2;
-    background-image: url('./../../assets/stormCloud.jpg');
+    background-image: url('./../../assets/arkVector.jpg');
     background-size: cover;
+    // background: rgb(34,193,195);
+    // background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
 article button:hover,
@@ -129,6 +134,7 @@ span.hide {
 
 .open {
     background-image: none;
+    pointer-events: none;
 }
 
 .hidden {

@@ -1,7 +1,8 @@
 // Namespace
 const noahsApp = {};
 
-noahsApp.animalDeck = ['🦕', '🦕', '🦖', '🦖', '🦓', '🦓', '🦒', '🦒', '🦛', '🦛', '🦧', '🦧', '🐎', '🐎', '🐃', '🐃'];
+// noahsApp.animalDeck = ['🦕', '🦕', '🦖', '🦖', '🦓', '🦓', '🦒', '🦒', '🦛', '🦛', '🦧', '🦧', '🐎', '🐎', '🐃', '🐃'];
+noahsApp.animalDeck = ['🦕', '🦕', '🦖', '🦖', '🦓', '🦓', '🦒', '🦒', '🦛', '🦛', '🦧', '🦧', '🐎', '🐎', '🐃', '🐃', '🐊', '🐊', '🐖', '🐖', '🐅', '🐅', '🐄','🐄'];
 noahsApp.shuffledDeck = [];
 noahsApp.clickedCard = null;
 noahsApp.matchCounter = 0;
@@ -61,6 +62,7 @@ noahsApp.checkForMatch = function(clickedButton) {
         if (clickedButtonInner === noahsApp.clickedCard[0].innerHTML) {
             setTimeout(function () {
                 $('.open').addClass('hidden');
+                // $('.open').off();  << -- experimenting
                 noahsApp.matchCounter++;
                 // TROUBLESHOOTING SOMETHING THAT IS INCREASING THIS
                 console.log(noahsApp.matchCounter);
@@ -80,7 +82,7 @@ noahsApp.checkForMatch = function(clickedButton) {
 
 noahsApp.checkForWinner = function() {
     if (noahsApp.winCounter === noahsApp.matchCounter) {
-        $('h2').html('<span>You win! 🎉🎉🎉</span>');
+        $('h2').html('<span>All animals are off the boat! 🎉🎉🎉</span>');
     }
 }
 
