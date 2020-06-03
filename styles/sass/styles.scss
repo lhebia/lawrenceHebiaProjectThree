@@ -24,7 +24,7 @@ h3 {
 .heroModal {
     position: absolute;
     background-color: transparent;
-    background-image: url('./../../assets/heroSplash.jpg');
+    background-image: url('./../assets/heroSplash.jpg');
     background-size: cover;
     top: 0;
     left: 0;
@@ -115,14 +115,14 @@ article button {
     border-radius: 4px;
     cursor: pointer;
     background-color: #f2f2f2;
-    background-image: url('./../../assets/arkVector.jpg');
+    background-image: url('./../assets/arkVector.jpg');
     background-size: cover;
     // background: rgb(34,193,195);
     // background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
-article button:hover,
-article button:focus {
+article button:hover {
+// article button:focus {
     /* background-color: #fcdf00; */
     transform: scale(1.2);
     border: 1px solid rgb(125, 125, 125);
