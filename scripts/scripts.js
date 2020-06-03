@@ -14,6 +14,7 @@ noahsApp.init = function() {
     noahsApp.createBoard();
     noahsApp.addCardListeners();
     noahsApp.winCounter = noahsApp.setWinCounter();
+    noahsApp.restart();
 }
 
 noahsApp.addStartButtonListener = function(){
@@ -84,6 +85,12 @@ noahsApp.checkForWinner = function() {
     if (noahsApp.winCounter === noahsApp.matchCounter) {
         $('h2').html('<span>All animals are off the boat! 🎉🎉🎉</span>');
     }
+}
+
+noahsApp.restart = function () {
+    $('.resetButton').on('click', function() {
+        location.reload();
+    })
 }
 
 $(function() {

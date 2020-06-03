@@ -317,12 +317,22 @@ h3 {
 }
 
 .mainBoard {
-  background-color: lightgray;
   padding: 2rem;
   border-radius: 8px;
-  text-align: center;
   -webkit-box-shadow: 0px 10px 65px -13px rgba(0, 0, 0, 0.68);
   box-shadow: 0px 10px 65px -13px rgba(0, 0, 0, 0.68);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.mainBoard .titleBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 article.gameBoard {

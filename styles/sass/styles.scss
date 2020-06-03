@@ -43,6 +43,8 @@ h3 {
     width: 60%;
     max-width: 700px;
     text-align: center;
+    // backdrop-filter: saturate(180%) blur(20px);
+    // background-color: rgba(255,255,255,0.7);
     p {
         color: white;
         line-height: 1.6rem;
@@ -83,13 +85,19 @@ h3 {
 }
 
 .mainBoard {
-    background-color: lightgray;
+    // background-color: lightgray;
     padding: 2rem;
     border-radius: 8px;
-    text-align: center;
+    // text-align: center;
     -webkit-box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
     -moz-box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
     box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255,255,255,0.7);
+    .titleBar {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 article.gameBoard {
