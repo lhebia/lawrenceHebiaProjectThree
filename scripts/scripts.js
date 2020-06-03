@@ -8,10 +8,17 @@ noahsApp.matchCounter = 0;
 noahsApp.winCounter = 0;
 
 noahsApp.init = function() {
+    noahsApp.addStartButtonListener();
     noahsApp.shuffledDeck = noahsApp.shuffleDeck(noahsApp.animalDeck)
     noahsApp.createBoard();
     noahsApp.addCardListeners();
     noahsApp.winCounter = noahsApp.setWinCounter();
+}
+
+noahsApp.addStartButtonListener = function(){
+    $('.startButton').on('click', function() {
+        $('.heroModal').addClass('negativeZIndex');
+    })
 }
 
 noahsApp.shuffleDeck = function (arr) {
@@ -32,7 +39,7 @@ noahsApp.createBoard = function () {
 }
 
 noahsApp.addCardListeners = function() {
-    $('button').on('click', function() {
+    $('.card').on('click', function() {
         $(this).find('span').toggleClass('hide');
         $(this).toggleClass('open');
         noahsApp.checkForMatch($(this));
@@ -73,10 +80,9 @@ noahsApp.checkForMatch = function(clickedButton) {
 
 noahsApp.checkForWinner = function() {
     if (noahsApp.winCounter === noahsApp.matchCounter) {
-        $('h2').html('<span>You won!</span>');
+        $('h2').html('<span>You win! 🎉🎉🎉</span>');
     }
 }
-
 
 $(function() {
     noahsApp.init();
