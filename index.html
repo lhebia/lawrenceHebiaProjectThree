@@ -8,28 +8,32 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Noah's Arc | Memory Game</title>
 </head>
-<body>
+<body class="hideVerticalOverflow">
 
-    <section class="heroModal">
-        <article class="">
+    <header class="heroModal">
+        <nav class="">
             <h1>Noah's Ark | Memory Match</h1>
             <p>After 40 days of flooding, it's time to find land but, the animals have all been separated on the boat. Help Noah match them together so they can go off into the world again to repopulate.</p>
             <button class="startButton">Start</button>
             <!-- <button class="startHardButton">Hard</button> -->
-        </article>
-    </section>
+        </nav>
+    </header>
 
     <div class="boardContainer">
-        <section class="mainBoard">
-            <div class="titleBar">
-                <h2>Noah's Ark Memory Game</h2>
-                <button class="resetButton">Reset</button>
-            </div>
+        <div class="wrapper">
+            <section class="mainBoard">
+                <article class="titleBar">
+                    <h2>Noah's Ark Memory Game</h2>
+                    <button class="resetButton">Reset</button>
+                </article>
             
-            <article class="gameBoard">
-                <!-- Game board buttons append here -->
-            </article>
-        </section>
+            </section>
+            <section>
+                <article class="gameBoard">
+                    <!-- Game board buttons append here -->
+                </article>
+            </section>
+        </div>
     </div>
     
 

@@ -7,6 +7,10 @@ body {
     font-size: 100%;
 }
 
+.hideVerticalOverflow {
+    overflow-y: hidden;
+}
+
 h1 {
     font-size: 2rem;
     line-height: 2.6rem;
@@ -28,6 +32,12 @@ h1, h2, h3 {
     font-family: 'Short Stack', cursive;
 }
 
+.wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .heroModal {
     position: absolute;
     background-color: transparent;
@@ -44,7 +54,7 @@ h1, h2, h3 {
     opacity: 1;
 }
 
-.heroModal article {
+.heroModal nav {
     border: 4px solid white;
     padding: 2rem;
     width: 60%;
@@ -97,8 +107,9 @@ h1, h2, h3 {
 
 .boardContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     width: 100vw;
     min-height: calc(100vh - 2rem);
     // background: rgb(0,38,128);
@@ -109,7 +120,8 @@ h1, h2, h3 {
 
 .mainBoard {
     // background-color: lightgray;
-    padding: 2rem;
+    padding: 1.8rem;
+    margin: 1.8rem auto;
     border-radius: 8px;
     // text-align: center;
     -webkit-box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
@@ -125,10 +137,11 @@ h1, h2, h3 {
 
 article.gameBoard {
     margin-top: 2rem;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 0.8rem;
 }
 
 article button {
@@ -194,7 +207,43 @@ footer {
         margin-top: 2rem;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
         grid-gap: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+    .heroModal nav {
+        width: 80%;
+    }
+
+    .titleBar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mainBoard {
+        padding: 0.5rem;
+    }
+
+    .resetButton {
+        padding: 0.5rem;
+        width: 4rem;
+        margin: 1rem auto 0;
+    }
+
+    article button {
+        padding: 0.5rem;
+        font-size: 3rem;
+    }
+
+    .mainBoard {
+        margin-top: 0;
     }
 }

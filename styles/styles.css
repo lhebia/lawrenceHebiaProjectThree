@@ -228,6 +228,10 @@ body {
   font-size: 100%;
 }
 
+.hideVerticalOverflow {
+  overflow-y: hidden;
+}
+
 h1 {
   font-size: 2rem;
   line-height: 2.6rem;
@@ -247,6 +251,12 @@ h3 {
 
 h1, h2, h3 {
   font-family: 'Short Stack', cursive;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .heroModal {
@@ -271,7 +281,7 @@ h1, h2, h3 {
   opacity: 1;
 }
 
-.heroModal article {
+.heroModal nav {
   border: 4px solid white;
   padding: 2rem;
   width: 60%;
@@ -282,7 +292,7 @@ h1, h2, h3 {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.heroModal article p {
+.heroModal nav p {
   color: white;
   line-height: 1.6rem;
 }
@@ -332,12 +342,13 @@ h1, h2, h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100vw;
   min-height: calc(100vh - 2rem);
   background: #5a8bff;
@@ -346,7 +357,8 @@ h1, h2, h3 {
 }
 
 .mainBoard {
-  padding: 2rem;
+  padding: 1.8rem;
+  margin: 1.8rem auto;
   border-radius: 8px;
   -webkit-box-shadow: 0px 10px 65px -13px rgba(0, 0, 0, 0.68);
   box-shadow: 0px 10px 65px -13px rgba(0, 0, 0, 0.68);
@@ -366,13 +378,14 @@ h1, h2, h3 {
 
 article.gameBoard {
   margin-top: 2rem;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 0.8rem;
 }
 
 article button {
@@ -436,8 +449,42 @@ footer {
     display: grid;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: (1fr)[6];
-        grid-template-rows: repeat(6, 1fr);
+    -ms-grid-rows: (1fr)[auto];
+        grid-template-rows: repeat(auto, 1fr);
     grid-gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroModal nav {
+    width: 80%;
+  }
+  .titleBar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .mainBoard {
+    padding: 0.5rem;
+  }
+  .resetButton {
+    padding: 0.5rem;
+    width: 4rem;
+    margin: 1rem auto 0;
+  }
+  article button {
+    padding: 0.5rem;
+    font-size: 3rem;
+  }
+  .mainBoard {
+    margin-top: 0;
   }
 }

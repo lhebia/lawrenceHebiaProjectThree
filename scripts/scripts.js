@@ -20,6 +20,7 @@ noahsApp.init = function() {
 noahsApp.addStartButtonListener = function(){
     $('.startButton').on('click', function() {
         $('.heroModal').addClass('negativeZIndex');
+        $('body').toggleClass('hideVerticalOverflow');
     })
 }
 
