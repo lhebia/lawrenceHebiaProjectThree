@@ -11,6 +11,10 @@ body {
     overflow-y: hidden;
 }
 
+h1, h2, h3 { 
+    font-family: 'Short Stack', cursive;
+}
+
 h1 {
     font-size: 2rem;
     line-height: 2.6rem;
@@ -26,10 +30,6 @@ h2 {
 h3 {
     font-size: 1.6rem;
     color: #C4AD83; 
-}
-
-h1, h2, h3 { 
-    font-family: 'Short Stack', cursive;
 }
 
 .wrapper {
