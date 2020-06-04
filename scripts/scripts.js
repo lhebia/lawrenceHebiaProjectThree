@@ -1,8 +1,104 @@
 // Namespace
 const noahsApp = {};
 
-// noahsApp.animalDeck = ['🦕', '🦕', '🦖', '🦖', '🦓', '🦓', '🦒', '🦒', '🦛', '🦛', '🦧', '🦧', '🐎', '🐎', '🐃', '🐃'];
-noahsApp.animalDeck = ['🦕', '🦕', '🦖', '🦖', '🦓', '🦓', '🦒', '🦒', '🦛', '🦛', '🦧', '🦧', '🐎', '🐎', '🐃', '🐃', '🐊', '🐊', '🐖', '🐖', '🐅', '🐅', '🐄','🐄'];
+noahsApp.animalDeck = [
+    {
+        animal: '🦕',
+        matchId: '001'
+    },
+    {
+        animal: '🦕',
+        matchId: '001'
+    },
+    {
+        animal: '🦖',
+        matchId: '002'
+    },
+    {
+        animal: '🦖',
+        matchId: '002'
+    },
+    {
+        animal: '🦓',
+        matchId: '003'
+    },
+    {
+        animal: '🦓',
+        matchId: '003'
+    },
+    {
+        animal: '🦒',
+        matchId: '004'
+    },
+    {
+        animal: '🦒',
+        matchId: '004'
+    },
+    {
+        animal: '🦛',
+        matchId: '005'
+    },
+    {
+        animal: '🦛',
+        matchId: '005'
+    },
+    {
+        animal: '🦧',
+        matchId: '006'
+    },
+    {
+        animal: '🦧',
+        matchId: '006'
+    },
+    {
+        animal: '🐎',
+        matchId: '007'
+    },
+    {
+        animal: '🐎',
+        matchId: '007'
+    },
+    {
+        animal: '🐃',
+        matchId: '008'
+    },
+    {
+        animal: '🐃',
+        matchId: '008'
+    },
+    {
+        animal: '🐊',
+        matchId: '009'
+    },
+    {
+        animal: '🐊',
+        matchId: '009'
+    },
+    {
+        animal: '🐖',
+        matchId: '010'
+    },
+    {
+        animal: '🐖',
+        matchId: '010'
+    },
+    {
+        animal: '🐅',
+        matchId: '011'
+    },
+    {
+        animal: '🐅',
+        matchId: '011'
+     },
+     {
+        animal: '🐄',
+        matchId: '012'
+     },
+     {
+        animal: '🐄',
+        matchId: '012'
+     }];
+
 noahsApp.shuffledDeck = [];
 noahsApp.clickedCard = null;
 noahsApp.matchCounter = 0;
@@ -34,11 +130,10 @@ noahsApp.shuffleDeck = function (arr) {
 }
 
 noahsApp.createBoard = function () {
-    for (let animal of noahsApp.shuffledDeck) {
-        const animalToInsert = animal;
-        const animalCard = `<button class="card"><span class="hide">${animalToInsert}</span></button>`;
+    noahsApp.shuffledDeck.forEach( function(animalObject) {
+        const animalCard = `<button class="card"><span data-matchId="${animalObject.matchId}"class="hide">${animalObject.animal}</span></button>`;
         $('.gameBoard').append(animalCard);
-    }
+    }) 
 }
 
 noahsApp.addCardListeners = function() {
@@ -48,8 +143,7 @@ noahsApp.addCardListeners = function() {
         noahsApp.checkForMatch($(this));
         setTimeout(function () {
             noahsApp.checkForWinner();
-        }, 500)
-        console.log(noahsApp.matchCounter);
+        }, 450)
     })
 }
 
@@ -64,18 +158,15 @@ noahsApp.checkForMatch = function(clickedButton) {
         if (clickedButtonInner === noahsApp.clickedCard[0].innerHTML) {
             setTimeout(function () {
                 $('.open').addClass('hidden');
-                // $('.open').off();  << -- experimenting
                 noahsApp.matchCounter++;
-                // TROUBLESHOOTING SOMETHING THAT IS INCREASING THIS
-                console.log(noahsApp.matchCounter);
-            }, 500)
+            }, 450)
             noahsApp.clickedCard = null;
         } else {
             setTimeout(function () {
                 $('button').removeClass('open');
                 $('button').find('span').addClass('hide');
                 noahsApp.clickedCard = null;
-            }, 500)
+            }, 450)
         }
     } else {
         noahsApp.clickedCard = clickedButton;
