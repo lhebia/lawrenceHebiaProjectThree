@@ -7,6 +7,8 @@ body {
     font-size: 100%;
 }
 
+img { width: 100%; }
+
 .hideVerticalOverflow {
     overflow-y: hidden;
 }
@@ -193,6 +195,10 @@ span.hide {
     z-index: -10;
 }
 
+.winBackground {
+    background-image: url('./../assets/giraffeWin.png');
+    background-size: contain;
+}
 
 footer {
     background-color: rgba(185,213,255,1);

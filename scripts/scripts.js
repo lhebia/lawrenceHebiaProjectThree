@@ -102,7 +102,7 @@ noahsApp.animalDeck = [
 noahsApp.shuffledDeck = [];
 noahsApp.clickedCard = null;
 noahsApp.matchCounter = 0;
-noahsApp.winCounter = 0;
+noahsApp.lockBoard = false;
 
 noahsApp.init = function() {
     noahsApp.addStartButtonListener();
@@ -111,6 +111,7 @@ noahsApp.init = function() {
     noahsApp.addCardListeners();
     noahsApp.winCounter = noahsApp.setWinCounter();
     noahsApp.restart();
+    console.log('Check');
 }
 
 noahsApp.addStartButtonListener = function(){
@@ -138,13 +139,17 @@ noahsApp.createBoard = function () {
 
 noahsApp.addCardListeners = function() {
     $('.card').on('click', function() {
-        $(this).find('span').toggleClass('hide');
-        $(this).toggleClass('open');
+        noahsApp.flipCards($(this));
         noahsApp.checkForMatch($(this));
         setTimeout(function () {
             noahsApp.checkForWinner();
         }, 450)
     })
+}
+
+noahsApp.flipCards = function(cardToFlip) {
+    $(cardToFlip).find('span').toggleClass('hide');
+    $(cardToFlip).toggleClass('open');
 }
 
 noahsApp.setWinCounter = function() {
@@ -162,6 +167,7 @@ noahsApp.checkForMatch = function(clickedButton) {
             }, 450)
             noahsApp.clickedCard = null;
         } else {
+            noahsApp.lockBoard = true;
             setTimeout(function () {
                 $('button').removeClass('open');
                 $('button').find('span').addClass('hide');
@@ -175,7 +181,10 @@ noahsApp.checkForMatch = function(clickedButton) {
 
 noahsApp.checkForWinner = function() {
     if (noahsApp.winCounter === noahsApp.matchCounter) {
-        $('h2').html('<span>All animals are off the boat! 🎉🎉🎉</span>');
+        $('h2').html('<span>All the animals are back on land! 🎉</span>');
+        $('.gameBoard')
+            .addClass(`winBackground`)
+            .append(`<p class="visuallyHidden">You Win!🦒🦒</p>`);
     }
 }
 
