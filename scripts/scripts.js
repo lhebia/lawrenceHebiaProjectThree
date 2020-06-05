@@ -181,7 +181,7 @@ noahsApp.checkForMatch = function(clickedButton) {
 
 noahsApp.checkForWinner = function() {
     if (noahsApp.winCounter === noahsApp.matchCounter) {
-        $('h2').html('<span>All the animals are back on land! 🎉</span>');
+        $('h2').html('<span>All the animals are back on land!</span>');
         $('.gameBoard')
             .addClass(`winBackground`)
             .append(`<p class="visuallyHidden">You Win!🦒🦒</p>`);

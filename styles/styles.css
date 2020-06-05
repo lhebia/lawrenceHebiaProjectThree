@@ -441,6 +441,7 @@ span.hide {
 .winBackground {
   background-image: url("./../assets/giraffeWin.png");
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 footer {
