@@ -228,8 +228,16 @@ body {
   font-size: 100%;
 }
 
+img {
+  width: 100%;
+}
+
 .hideVerticalOverflow {
   overflow-y: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Short Stack', cursive;
 }
 
 h1 {
@@ -247,10 +255,6 @@ h2 {
 h3 {
   font-size: 1.6rem;
   color: #C4AD83;
-}
-
-h1, h2, h3 {
-  font-family: 'Short Stack', cursive;
 }
 
 .wrapper {
@@ -432,6 +436,11 @@ span.hide {
 
 .negativeZIndex {
   z-index: -10;
+}
+
+.winBackground {
+  background-image: url("./../assets/giraffeWin.png");
+  background-size: contain;
 }
 
 footer {
