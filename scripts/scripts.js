@@ -111,7 +111,6 @@ noahsApp.init = function() {
     noahsApp.addCardListeners();
     noahsApp.winCounter = noahsApp.setWinCounter();
     noahsApp.restart();
-    console.log('Check');
 }
 
 noahsApp.addStartButtonListener = function(){
@@ -132,7 +131,11 @@ noahsApp.shuffleDeck = function (arr) {
 
 noahsApp.createBoard = function () {
     noahsApp.shuffledDeck.forEach( function(animalObject) {
-        const animalCard = `<button class="card"><span data-matchId="${animalObject.matchId}"class="hide">${animalObject.animal}</span></button>`;
+        const animalCard = $('<button>').addClass('card');
+        const animalSpan = $('<span>')
+            .addClass('hide')
+            .text(`${animalObject.animal}`);
+        animalCard.append(animalSpan);
         $('.gameBoard').append(animalCard);
     }) 
 }
