@@ -21,5 +21,5 @@
 * Semantic HTML elements are used properly
 * Setup snippet is used
 * Wrapper used to constrain content on large displays
-* One external .css stylesheet is used for whole project
+* One external ```.css``` stylesheet is used for whole project
 * Site is responsive and uses media queries
