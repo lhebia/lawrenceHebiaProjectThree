@@ -3,100 +3,100 @@ const noahsApp = {};
 
 noahsApp.animalDeck = [
     {
-        animal: '🦕',
-        matchId: '001'
+        animal: '\u{1f995}',
+        label: 'A sauropod'
     },
     {
-        animal: '🦕',
-        matchId: '001'
+        animal: '\u{1f995}',
+        label: 'A sauropod'
     },
     {
-        animal: '🦖',
-        matchId: '002'
+        animal: '\u{1f996}',
+        label: 'A T-rex'
     },
     {
-        animal: '🦖',
-        matchId: '002'
+        animal: '\u{1f996}',
+        label: 'A T-rex'
     },
     {
-        animal: '🦓',
-        matchId: '003'
+        animal: '\u{1f993}',
+        label: 'A Zebra'
     },
     {
-        animal: '🦓',
-        matchId: '003'
+        animal: '\u{1f993}',
+        label: 'A Zebra'
     },
     {
-        animal: '🦒',
-        matchId: '004'
+        animal: '\u{1f992}',
+        label: 'A Giraffe'
     },
     {
-        animal: '🦒',
-        matchId: '004'
+        animal: '\u{1f992}',
+        label: 'A Giraffe'
     },
     {
-        animal: '🦛',
-        matchId: '005'
+        animal: '\u{1f99B}',
+        label: 'A Hippopotamus'
     },
     {
-        animal: '🦛',
-        matchId: '005'
+        animal: '\u{1f99B}',
+        label: 'A Hippopotamus'
     },
     {
-        animal: '🦧',
-        matchId: '006'
+        animal: '\u{1F418}',
+        label: 'An Elephant'
     },
     {
-        animal: '🦧',
-        matchId: '006'
+        animal: '\u{1F418}',
+        label: 'An Elephant'
     },
     {
-        animal: '🐎',
-        matchId: '007'
+        animal: '\u{1F40E}',
+        label: 'A horse'
     },
     {
-        animal: '🐎',
-        matchId: '007'
+        animal: '\u{1F40E}',
+        label: 'A horse'
     },
     {
-        animal: '🐃',
-        matchId: '008'
+        animal: '\u{1F403}',
+        label: 'A Water Buffalo'
     },
     {
-        animal: '🐃',
-        matchId: '008'
+        animal: '\u{1F403}',
+        label: 'A Water Buffalo'
     },
     {
-        animal: '🐊',
-        matchId: '009'
+        animal: '\u{1F40A}',
+        label: 'A Crocodile'
     },
     {
-        animal: '🐊',
-        matchId: '009'
+        animal: '\u{1F40A}',
+        label: 'A Crocodile'
     },
     {
-        animal: '🐖',
-        matchId: '010'
+        animal: '\u{1F42A}',
+        label: 'A Camel'
     },
     {
-        animal: '🐖',
-        matchId: '010'
+        animal: '\u{1F42A}',
+        label: 'A Camel'
     },
     {
-        animal: '🐅',
-        matchId: '011'
+        animal: '\u{1F405}',
+        label: 'A Tiger'
     },
     {
-        animal: '🐅',
-        matchId: '011'
+        animal: '\u{1F405}',
+        label: 'A Tiger'
      },
      {
-        animal: '🐄',
-        matchId: '012'
+        animal: '\u{1F404}',
+        label: 'A Cow'
      },
      {
-        animal: '🐄',
-        matchId: '012'
+        animal: '\u{1F404}',
+        label: 'A Cow'
      }];
 
 noahsApp.shuffledDeck = [];
@@ -134,7 +134,9 @@ noahsApp.createBoard = function () {
         const animalCard = $('<button>').addClass('card');
         const animalSpan = $('<span>')
             .addClass('hide')
-            .text(`${animalObject.animal}`);
+            .attr('aria-role', 'img')
+            .attr('aria-label', animalObject.label)
+            .html(animalObject.animal);
         animalCard.append(animalSpan);
         $('.gameBoard').append(animalCard);
     }) 
@@ -161,6 +163,9 @@ noahsApp.setWinCounter = function() {
 }
 
 noahsApp.checkForMatch = function(clickedButton) {
+    console.log(clickedButton);
+    console.log($(this));
+    console.log(this);
     const clickedButtonInner = clickedButton[0].innerHTML;
     if (noahsApp.clickedCard) {
         if (clickedButtonInner === noahsApp.clickedCard[0].innerHTML) {
