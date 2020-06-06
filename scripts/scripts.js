@@ -168,6 +168,9 @@ noahsApp.setWinCounter = function() {
 }
 
 noahsApp.checkForMatch = function(clickedButton) {
+    console.log(clickedButton);
+    console.log(this);
+    console.log($(this));
     const clickedButtonInner = clickedButton[0].innerHTML;
     if (noahsApp.clickedCard) {
         if (clickedButtonInner === noahsApp.clickedCard[0].innerHTML) {
