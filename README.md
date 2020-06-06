@@ -4,10 +4,10 @@
 
 ### Project Requirements:
 
-** It is clear to the user what the app does
-** Adds to the DOM dynamically using JavaScript
-** Interacts with the DOM (HTML) using events or taking input from the user
-** Modern ES6 variable declarations used (let, const)
+* It is clear to the user what the app does
+* Adds to the DOM dynamically using JavaScript
+* Interacts with the DOM (HTML) using events or taking input from the user
+* Modern ES6 variable declarations used (let, const)
 ** GitHub repo has more than one significant commit
 ** App and interactions are accessible
 ** Site is live on GH Pages or student's own URL
