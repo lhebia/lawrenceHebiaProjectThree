@@ -106,15 +106,18 @@ noahsApp.lockBoard = false;
 
 noahsApp.init = function() {
     noahsApp.addStartButtonListener();
-    noahsApp.shuffledDeck = noahsApp.shuffleDeck(noahsApp.animalDeck)
-    noahsApp.createBoard();
-    noahsApp.addCardListeners();
-    noahsApp.winCounter = noahsApp.setWinCounter();
     noahsApp.restart();
 }
 
 noahsApp.addStartButtonListener = function(){
     $('.startButton').on('click', function() {
+        if ($(this).hasClass('easy')) {
+            console.log('eazy bruh');
+        }
+        noahsApp.shuffledDeck = noahsApp.shuffleDeck(noahsApp.animalDeck)
+        noahsApp.createBoard();
+        noahsApp.addCardListeners();
+        noahsApp.winCounter = noahsApp.setWinCounter();
         $('.heroModal').addClass('negativeZIndex');
         $('body').toggleClass('hideVerticalOverflow');
     })
