@@ -109,12 +109,14 @@ noahsApp.init = function() {
     noahsApp.restart();
 }
 
-noahsApp.addStartButtonListener = function(){
+noahsApp.addStartButtonListener = function() {
     $('.startButton').on('click', function() {
         if ($(this).hasClass('easy')) {
-            console.log('eazy bruh');
+            noahsApp.smallDeck = noahsApp.animalDeck.slice(0, -6);
+            noahsApp.shuffledDeck = noahsApp.shuffleDeck(noahsApp.smallDeck)
+        } else {
+            noahsApp.shuffledDeck = noahsApp.shuffleDeck(noahsApp.animalDeck)
         }
-        noahsApp.shuffledDeck = noahsApp.shuffleDeck(noahsApp.animalDeck)
         noahsApp.createBoard();
         noahsApp.addCardListeners();
         noahsApp.winCounter = noahsApp.setWinCounter();
@@ -166,9 +168,6 @@ noahsApp.setWinCounter = function() {
 }
 
 noahsApp.checkForMatch = function(clickedButton) {
-    console.log(clickedButton);
-    console.log($(this));
-    console.log(this);
     const clickedButtonInner = clickedButton[0].innerHTML;
     if (noahsApp.clickedCard) {
         if (clickedButtonInner === noahsApp.clickedCard[0].innerHTML) {

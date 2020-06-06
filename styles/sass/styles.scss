@@ -94,6 +94,9 @@ h3 {
 
 .startButton {
     text-transform: uppercase;
+    &:hover {
+        background: rgba(255,255,255,0.3);
+    }
 }
 
 .resetButton {
