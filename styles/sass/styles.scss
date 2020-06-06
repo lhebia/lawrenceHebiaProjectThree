@@ -85,7 +85,6 @@ h3 {
     background-size: cover;
     &:hover,
     &:focus {
-        /* background-color: #fcdf00; */
         transform: scale(1.06);
         border: 1px solid white;
         -webkit-box-shadow: none;
@@ -111,21 +110,16 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
     width: 100vw;
     min-height: calc(100vh - 2rem);
-    // background: rgb(0,38,128);
-    // background: linear-gradient(142deg, rgba(0,38,128,1) 26%, rgba(31,96,255,1) 66%, rgba(185,213,255,1) 95%); 
     background: rgb(90,139,255);
     background: linear-gradient(180deg, rgba(90,139,255,1) 0%, rgba(103,135,213,1) 21%, rgba(185,213,255,1) 69%); 
 }
 
 .mainBoard {
-    // background-color: lightgray;
     padding: 1.8rem;
     margin: 1.8rem auto;
     border-radius: 8px;
-    // text-align: center;
     -webkit-box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
     -moz-box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
     box-shadow: 0px 10px 65px -13px rgba(0,0,0,0.68);
@@ -155,27 +149,20 @@ article button {
     background-color: #f2f2f2;
     background-image: url('./../assets/arkVector.jpg');
     background-size: cover;
-    // background: rgb(34,193,195);
-    // background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-}
-
-article button:hover {
-// article button:focus {
-    /* background-color: #fcdf00; */
-    transform: scale(1.1);
+    &:hover {
+        transform: scale(1.06);
+    }
+    &:active {
+        transform: scale(0.96);
+    }
 }
 
 article button:hover, 
 article button:focus {
-    border: 1px solid rgb(125, 125, 125);
+    border: 1px solid dodgerblue;
     -webkit-box-shadow: 0px 10px 47px -2px rgba(0,0,0,0.68);
     -moz-box-shadow: 0px 10px 47px -2px rgba(0,0,0,0.68);
     box-shadow: 0px 10px 47px -2px rgba(0,0,0,0.68);
-}
-
-article button:active {
-    // background-color: #cbb300;
-    transform: scale(0.96);
 }
 
 span.hide { 
@@ -206,7 +193,6 @@ footer {
     text-align: center;
     height: 2rem;
     line-height: 1.6rem;
-    z-index: 100;
 }
 
 @media (max-width: 850px) {

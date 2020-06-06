@@ -321,7 +321,6 @@ h3 {
 .startHardButton:focus,
 .resetButton:hover,
 .resetButton:focus {
-  /* background-color: #fcdf00; */
   -webkit-transform: scale(1.06);
           transform: scale(1.06);
   border: 1px solid white;
@@ -404,21 +403,20 @@ article button {
 }
 
 article button:hover {
-  /* background-color: #fcdf00; */
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-article button:hover,
-article button:focus {
-  border: 1px solid #7d7d7d;
-  -webkit-box-shadow: 0px 10px 47px -2px rgba(0, 0, 0, 0.68);
-  box-shadow: 0px 10px 47px -2px rgba(0, 0, 0, 0.68);
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
 }
 
 article button:active {
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
+}
+
+article button:hover,
+article button:focus {
+  border: 1px solid dodgerblue;
+  -webkit-box-shadow: 0px 10px 47px -2px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 10px 47px -2px rgba(0, 0, 0, 0.68);
 }
 
 span.hide {
@@ -449,7 +447,6 @@ footer {
   text-align: center;
   height: 2rem;
   line-height: 1.6rem;
-  z-index: 100;
 }
 
 @media (max-width: 850px) {
