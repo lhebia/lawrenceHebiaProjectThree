@@ -174,20 +174,15 @@ noahsApp.setWinCounter = function() {
 noahsApp.checkForMatch = function(clickedButton) {
     if (noahsApp.clickedCard) {
         if (clickedButton.text() === noahsApp.clickedCard.text()) {
-            console.log(noahsApp.clickedCard);
             setTimeout(function () {
-                // $('.open').addClass('hidden');
                 clickedButton.addClass('hidden');
                 noahsApp.clickedCard.addClass('hidden');
                 $('.hidden').removeClass('open');
                 noahsApp.matchCounter++;
-                // noahsApp.clickedCard = null;
             }, 450)
-            // $('.hidden').removeClass('open');
             setTimeout(function () {
                 noahsApp.clickedCard = null;
             }, 450)
-            // noahsApp.clickedCard = null;
         } else {
             noahsApp.lockBoard = true;
             setTimeout(function () {
