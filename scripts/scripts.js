@@ -102,7 +102,6 @@ noahsApp.animalDeck = [
 noahsApp.shuffledDeck = [];
 noahsApp.clickedCard = null;
 noahsApp.matchCounter = 0;
-noahsApp.lockBoard = false;
 
 noahsApp.init = function() {
     noahsApp.addStartButtonListener();
@@ -184,7 +183,6 @@ noahsApp.checkForMatch = function(clickedButton) {
                 noahsApp.clickedCard = null;
             }, 450)
         } else {
-            noahsApp.lockBoard = true;
             setTimeout(function () {
                 $('button').removeClass('open');
                 $('button').find('span').addClass('hide');
