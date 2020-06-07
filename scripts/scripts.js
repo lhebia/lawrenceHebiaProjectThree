@@ -149,6 +149,9 @@ noahsApp.createBoard = function () {
 
 noahsApp.addCardListeners = function() {
     $('.card').on('click', function() {
+        if ($('.open').length >= 2) {
+            return false;
+        }
         noahsApp.flipCards($(this));
         noahsApp.checkForMatch($(this));
         setTimeout(function () {
@@ -158,6 +161,7 @@ noahsApp.addCardListeners = function() {
 }
 
 noahsApp.flipCards = function(cardToFlip) {
+
     $(cardToFlip).find('span').toggleClass('hide');
     $(cardToFlip).toggleClass('open');
 }
