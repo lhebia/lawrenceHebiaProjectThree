@@ -107,6 +107,30 @@ noahsApp.init = function() {
     noahsApp.restart();
 }
 
+noahsApp.timerUp = function() {
+    let min = 0;
+    let second = 00;
+    let zeroPlaceholder = 0;
+    noahsApp.counterId = setInterval(function () {
+        noahsApp.incrementTimer();
+    }, 1000);
+
+    noahsApp.incrementTimer = function() {
+        second++;
+        if (second == 59) {
+            second = 00;
+            min = min + 1;
+        }
+        if (second == 10) {
+            zeroPlaceholder = '';
+        } else
+            if (second == 00) {
+                zeroPlaceholder = 0;
+            }
+        $('.countUp').text(min + ':' + zeroPlaceholder + second);
+    }
+}
+
 noahsApp.addStartButtonListener = function() {
     $('.startButton').on('click', function() {
         if ($(this).hasClass('easy')) {
@@ -120,6 +144,7 @@ noahsApp.addStartButtonListener = function() {
         noahsApp.winCounter = noahsApp.setWinCounter();
         $('.heroModal').addClass('negativeZIndex');
         $('body').toggleClass('hideVerticalOverflow');
+        noahsApp.timerUp();
     })
 }
 
@@ -194,10 +219,11 @@ noahsApp.checkForMatch = function(clickedButton) {
 
 noahsApp.checkForWinner = function() {
     if (noahsApp.winCounter === noahsApp.matchCounter) {
-        $('h2').html('<span>All the animals are back on land!</span>');
+        $('h2').html('<span>You got all the animals back in:</span>');
         $('.gameBoard')
             .addClass(`winBackground`)
             .append(`<p class="visuallyHidden">You Win!🦒🦒</p>`);
+        clearInterval(noahsApp.counterId);
     }
 }
 
