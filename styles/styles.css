@@ -232,10 +232,6 @@ img {
   width: 100%;
 }
 
-.hideVerticalOverflow {
-  overflow-y: hidden;
-}
-
 h1, h2, h3 {
   font-family: 'Short Stack', cursive;
 }
@@ -255,6 +251,20 @@ h2 {
 h3 {
   font-size: 1.6rem;
   color: #C4AD83;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hideVerticalOverflow {
+  overflow-y: hidden;
 }
 
 .wrapper {
@@ -446,7 +456,8 @@ footer {
   background-color: #b9d5ff;
   text-align: center;
   height: 2rem;
-  line-height: 1.6rem;
+  font-size: 0.7rem;
+  line-height: 0.9rem;
 }
 
 @media (max-width: 850px) {

@@ -1,4 +1,3 @@
-// Namespace
 const noahsApp = {};
 
 noahsApp.animalDeck = [
@@ -155,12 +154,11 @@ noahsApp.addCardListeners = function() {
         noahsApp.checkForMatch($(this));
         setTimeout(function () {
             noahsApp.checkForWinner();
-        }, 450)
+        }, 500)
     })
 }
 
 noahsApp.flipCards = function(cardToFlip) {
-
     $(cardToFlip).find('span').toggleClass('hide');
     $(cardToFlip).toggleClass('open');
 }
@@ -178,16 +176,16 @@ noahsApp.checkForMatch = function(clickedButton) {
                 noahsApp.clickedCard.addClass('hidden');
                 $('.hidden').removeClass('open');
                 noahsApp.matchCounter++;
-            }, 450)
+            }, 500)
             setTimeout(function () {
                 noahsApp.clickedCard = null;
-            }, 450)
+            }, 500)
         } else {
             setTimeout(function () {
                 $('button').removeClass('open');
                 $('button').find('span').addClass('hide');
                 noahsApp.clickedCard = null;
-            }, 450)
+            }, 500)
         }
     } else {
         noahsApp.clickedCard = clickedButton;
