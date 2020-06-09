@@ -1,6 +1,9 @@
-# Juno Project Three
+# Juno Project Three - Noah's Ark Memory Match
 
-## Noah's Ark Memory Match
+Built with JQuery, HTML5, SCSS this app was built with younger children in mind. Constructed with the bibilical story of Noah's Ark in mind, the user is asked to pair the separated animal emojis together so that they can succesfully "leave the boat together". A timer keeps track of elapsed time until the win so that instead of score, the user can create a baseline for time of completion and can see progress through that tracked time on further attempts.
+
+Wins: error handling.
+Challenges: design, color schemes and timer function.
 
 ### Project Requirements:
 
