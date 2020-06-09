@@ -339,7 +339,7 @@ a:hover, a:focus {
   text-transform: uppercase;
 }
 
-.startButton:hover {
+.startButton:hover, .startButton:focus {
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -352,7 +352,7 @@ a:hover, a:focus {
   background-color: #C4AD83;
 }
 
-.resetButton:hover {
+.resetButton:hover, .resetButton:focus {
   background-color: #ff5c5c;
 }
 

@@ -101,7 +101,8 @@ a {
 
 .startButton {
     text-transform: uppercase;
-    &:hover {
+    &:hover,
+    &:focus {
         background: rgba(255,255,255,0.3);
     }
 }
@@ -113,7 +114,8 @@ a {
     margin-top: 0;
     margin-left: 2rem;
     background-color: #C4AD83;
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: rgb(255, 92, 92);
     }
 }
