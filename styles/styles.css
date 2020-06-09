@@ -233,7 +233,7 @@ img {
 }
 
 h1, h2, h3 {
-  font-family: 'Short Stack', cursive;
+  font-family: 'Short Stack', Arial, Helvetica, sans-serif, cursive;
 }
 
 h1 {
@@ -348,6 +348,7 @@ a:hover, a:focus {
   padding: 0.5rem 0.5rem;
   border: none;
   margin-top: 0;
+  margin-left: 2rem;
   background-color: #C4AD83;
 }
 
@@ -402,6 +403,12 @@ a:hover, a:focus {
   background-color: darkgrey;
   padding: 0.3rem;
   border-radius: 5px;
+}
+
+.widgetContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 article.gameBoard {
@@ -477,14 +484,17 @@ footer {
 
 @media (max-width: 850px) {
   article.gameBoard {
-    margin-top: 2rem;
+    margin: 2rem 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: (1fr)[auto];
         grid-template-rows: repeat(auto, 1fr);
     grid-gap: 0.5rem;
+  }
+  body {
+    font-size: 125%;
   }
 }
 
@@ -508,10 +518,15 @@ footer {
   .mainBoard {
     padding: 0.5rem;
   }
+  .widgetContainer {
+    width: 80%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
   .resetButton {
     padding: 0.5rem;
     width: 4rem;
-    margin: 1rem auto 0;
   }
   article button {
     padding: 0.5rem;
