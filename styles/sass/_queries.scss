@@ -1,0 +1,55 @@
+// "Tablet" viewport
+@media (max-width: 850px) {
+    article.gameBoard {
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        grid-gap: 0.5rem;
+    }
+    body {
+        font-size: 125%;
+    }
+}
+
+// Utilize space 
+@media (max-width: 600px) {
+    .wrapper {
+        width: 95%;
+    }
+}
+
+// All small/medium mobile devices
+@media (max-width: 500px) {
+    .heroModal nav {
+        width: 80%;
+    }
+
+    .titleBar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mainBoard {
+        padding: 0.5rem;
+    }
+
+    .widgetContainer {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .resetButton {
+        padding: 0.5rem;
+        width: 4rem;
+    }
+
+    article button {
+        padding: 0.5rem;
+        font-size: 3rem;
+    }
+
+    .mainBoard {
+        margin-top: 0;
+    }
+}
