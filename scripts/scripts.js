@@ -108,7 +108,6 @@ noahsApp.matchCounter = 0;
 
 // Add listener to start buttons (the users first action), & reset button
 noahsApp.init = function() {
-
     noahsApp.addStartButtonListener();
     noahsApp.restart();
 }
