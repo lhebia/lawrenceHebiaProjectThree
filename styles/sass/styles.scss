@@ -10,7 +10,7 @@ body {
 img { width: 100%; }
 
 h1, h2, h3 { 
-    font-family: 'Short Stack', cursive;
+    font-family: 'Short Stack', Arial, Helvetica, sans-serif, cursive;
 }
 
 h1 {
@@ -113,8 +113,8 @@ a {
     padding: 0.5rem 0.5rem;
     border: none;
     margin-top: 0;
+    margin-left: 2rem;
     background-color: #C4AD83;
-    // background-color: darkgrey;
     &:hover {
         background-color: rgb(255, 92, 92);
     }
@@ -151,6 +151,10 @@ a {
             border-radius: 5px;
         }
     }
+}
+
+.widgetContainer {
+    display: flex;
 }
 
 article.gameBoard {
@@ -218,22 +222,28 @@ footer {
     line-height: 0.9rem;
 }
 
+// "Tablet" viewport
 @media (max-width: 850px) {
     article.gameBoard {
-        margin-top: 2rem;
+        margin: 2rem 0;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(auto, 1fr);
         grid-gap: 0.5rem;
     }
+    body {
+        font-size: 125%;
+    }
 }
 
+// Utilize space 
 @media (max-width: 600px) {
     .wrapper {
         width: 95%;
     }
 }
 
+// All small/medium mobile devices
 @media (max-width: 500px) {
     .heroModal nav {
         width: 80%;
@@ -248,10 +258,14 @@ footer {
         padding: 0.5rem;
     }
 
+    .widgetContainer {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
     .resetButton {
         padding: 0.5rem;
         width: 4rem;
-        margin: 1rem auto 0;
     }
 
     article button {

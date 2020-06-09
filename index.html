@@ -10,6 +10,7 @@
 </head>
 <body class="hideVerticalOverflow">
 
+    <!-- Modal on load to introduce app -->
     <header class="heroModal">
         <nav class="">
             <h1>Noah's Ark | Memory Match</h1>
@@ -24,8 +25,12 @@
             <section class="mainBoard">
                 <article class="titleBar">
                     <h2>Noah's Ark Memory Match</h2>
-                    <span class="countUp">0:00</span>
-                    <button class="resetButton">Reset</button>
+                    <div class="widgetContainer">
+                        <!-- Timer to show elapsed time -->
+                        <span class="countUp">0:00</span>
+                        <!-- To reset board -->
+                        <button class="resetButton">Reset</button>
+                    </div>
                 </article>
             
             </section>
@@ -39,7 +44,7 @@
     
     <footer>
         <p>Made by <a href="https://lawrencehebia.com">Lawrence Hebia</a> in 2020</p>
-        <p>Vectors images by <a href="https://www.vecteezy.com/free-vector/timber">Vecteezy</a></p>
+        <p>Vectors images by <a href="https://www.vecteezy.com">Vecteezy</a></p>
     </footer>
     
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
